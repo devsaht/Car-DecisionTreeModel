@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" >
+</head>
+<body>
+    <header>
+        DECISION TREE MODEL
+    </header>
+    <main>
+        <div class="inputs-container">
+            <form action="" style="display: none;">
+                <p>Completa los datos</p>
+                <div class="input-model">
+                    <label for="safety">Safety</label>
+                    <select name="safety">
+                        <option value="none" selected>none</option>
+                        <option value="low">low</option>
+                        <option value="med">med</option>
+                        <option value="high">high</option>
+                    </select>
+                </div>
+                <div class="input-model">
+                    <label for="persons">Persons</label>
+                    <select name="persons">
+                        <option value="none" selected>none</option>
+                        <option value="lethree"><=3</option>
+                        <option value="gthree">>3</option>
+                    </select>
+                </div>
+                <div class="input-model">
+                    <label for="buying">Buying</label>
+                    <select name="buying">
+                        <option value="none" selected>none</option>
+                        <option value="vhigh" selected>very high</option>
+                        <option value="high">high</option>
+                        <option value="med">med</option>
+                        <option value="low">low</option>
+                    </select>
+                </div>
+                <div class="input-model">
+                    <label for="doors">Doors</label>
+                    <select name="doors">
+                        <option value="none" selected>none</option>
+                        <option value="le25"><=2.5</option>
+                        <option value="g25">>2.5</option>
+                    </select>
+                </div>
+            </form>
+            <div style="display: block;">
+                Ready?
+            </div>
+        </div>
+        <div>
+            <img src="right-arrow.png" alt="right-arrow" widht="90" height="90">
+        </div>
+        <div>
+            <div>prediccion del modelo</div>
+        </div>
+    </main>
+    <footer>
+        2022 - Universidad Nacional Mayor de San Marcos
+    </footer>
+</body>
+</html>
