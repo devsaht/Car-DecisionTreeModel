@@ -1,5 +1,6 @@
 const predictBtn = document.querySelector('#btnPredict');
-const resultContainer = document.querySelector('#resultContainer');
+const show_model = document.getElementById('show-model');
+
 
 cargarEventListeners();
 function cargarEventListeners(){
@@ -7,26 +8,13 @@ function cargarEventListeners(){
 }
 
 function predict(){
-    let safety = document.querySelector('.form .safety select').value;
-    let persons = document.querySelector('.form .persons input').value;
-    let buying = document.querySelector('.form .buying select').value;
-    let doors = document.querySelector('.form .doors input').value;
-    let valuePredicted = document.querySelector('#result')
-
-    try{
-        persons = parseInt(persons)
-        doors = parseInt(doors)
-
-        if (isNaN(persons) || isNaN(doors)) throw "Se esperaba dato numérico";
-        if (safety=="none" || doors=="none" ) throw "Datos incompletos";
-    }catch(e){
-        alert(e)
-    }
-
-    console.log(safety,persons,buying,doors);
+    const safety = document.querySelector('.form .safety select').value;
+    const persons = document.querySelector('.form .persons input').value;
+    const buying = document.querySelector('.form .buying select').value;
+    const doors = document.querySelector('.form .doors input').value;
+    const valuePredicted = document.querySelector('#result')
 
     result = calc(safety,persons,buying,doors);
-
     console.log(result);
     valuePredicted.textContent = result;
 }
