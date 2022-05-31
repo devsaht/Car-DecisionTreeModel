@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>App Machine Learning</title>
     <link rel="stylesheet" href="styles.css" >
 </head>
 <body>
@@ -12,58 +12,56 @@
         DECISION TREE MODEL
     </header>
     <main>
-        <div class="inputs-container">
-            <form action="" style="display: none;">
-                <p>Completa los datos</p>
-                <div class="input-model">
-                    <label for="safety">Safety</label>
-                    <select name="safety">
-                        <option value="none" selected>none</option>
-                        <option value="low">low</option>
-                        <option value="med">med</option>
-                        <option value="high">high</option>
-                    </select>
+            <p>Completa los datos</p>
+            <div class="container">
+                <form class='form'>
+                    <div class="campos">
+                        <div class="input-model safety">
+                            <label>Safety</label>
+                            <select name="safety" required>
+                                <option value="none"  disabled selected>None</option>
+                                <option value="low">Low</option>
+                                <option value="med">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+                        <div class="input-model persons">
+                            <label>Persons</label>
+                            <input type="number" min="2" required>
+                        </div>
+                        <div class="input-model buying">
+                            <label>Buying</label>
+                            <select name="buying" required>
+                                <option value="none" disabled selected>None</option>
+                                <option value="vhigh">Very High</option>
+                                <option value="high">High</option>
+                                <option value="med">Med</option>
+                                <option value="low">Low</option>
+                            </select>
+                        </div>
+                        <div class="input-model doors">
+                            <label>Doors</label>
+                            <input type="number" min="2" required>
+                        </div>
+                        
+                    </div>
+                    
+                    <div id="btnPredict">
+                        <img src="right-arrow.png" widht="90" height="90" alt="right-arrow" onclick="predict();">
+                    </div>
+                </form>
+                <div class="result">
+                    <p>Prediccion del modelo</p>
+                    <p id="result"></p>
                 </div>
-                <div class="input-model">
-                    <label for="persons">Persons</label>
-                    <select name="persons">
-                        <option value="none" selected>none</option>
-                        <option value="lethree"><=3</option>
-                        <option value="gthree">>3</option>
-                    </select>
-                </div>
-                <div class="input-model">
-                    <label for="buying">Buying</label>
-                    <select name="buying">
-                        <option value="none" selected>none</option>
-                        <option value="vhigh" selected>very high</option>
-                        <option value="high">high</option>
-                        <option value="med">med</option>
-                        <option value="low">low</option>
-                    </select>
-                </div>
-                <div class="input-model">
-                    <label for="doors">Doors</label>
-                    <select name="doors">
-                        <option value="none" selected>none</option>
-                        <option value="le25"><=2.5</option>
-                        <option value="g25">>2.5</option>
-                    </select>
-                </div>
-            </form>
-            <div style="display: block;">
-                Ready?
-            </div>
         </div>
-        <div>
-            <img src="right-arrow.png" alt="right-arrow" widht="90" height="90">
-        </div>
-        <div>
-            <div>prediccion del modelo</div>
-        </div>
-    </main>
+        
+        
+    </main >
     <footer>
         2022 - Universidad Nacional Mayor de San Marcos
     </footer>
+
+    <script src="/app.js"></script>
 </body>
 </html>
