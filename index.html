@@ -11,13 +11,13 @@
     <header id="header">
         <p>DECISION TREE MODEL</p>
         <a href="full-model.png" target="_blank">
-            <button class="show-model" id="show-model">Ver modelo</button>
+            <button class="show-model" id="show-model">Show model</button>
         </a>
     </header>
     <main id="main">
         <div class="container" id="container">
             <form class='form'>
-                <p style="font-size:18px">Completa los datos</p>
+                <p style="font-size:18px; font-weight: 600; font-size: 16px;">COMPLETE THE DATA</p>
                 <div class="campos">
                     <div class="input-model safety">
                         <label class="label">Safety</label>
@@ -30,7 +30,7 @@
                     </div>
                     <div class="input-model persons">
                         <span>Persons</span>
-                        <input type="radio" id="ee2" name="persons" value="2" checked="checked"> 2
+                        <input type="radio" id="ee2" name="persons" value="2" > 2
                         <input type="radio" id="ee3" name="persons" value="3" > 3
                         <input type="radio" id="ee4" name="persons" value="4" > 4
                         <input type="radio" id="ee5" name="persons" value="5" > 5 +
@@ -47,7 +47,7 @@
                     </div>
                     <div class="input-model doors">
                         <span>Doors</span>
-                        <input type="radio" id="e2" name="doors" value="2" checked="checked"> 2
+                        <input type="radio" id="e2" name="doors" value="2" > 2
                         <input type="radio" id="e3" name="doors" value="3" > 3
                         <input type="radio" id="e4" name="doors" value="4" > 4
                         <input type="radio" id="e5" name="doors" value="5" > 5 +
@@ -59,8 +59,10 @@
             <div id="btnPredict" class="btnPredict">
                 <img src="right-arrow.png" widht="60" height="60" alt="right-arrow" onclick="predict();">
             </div>
+
             <div class="result" id="resultContainer">
-                <p>Prediccion del modelo</p>
+                <span style="font-size: 16px; font-weight: 600;">MODEL PREDICTION</span>
+                <p>¿should I buy the car?</p>
                 <p id="result"></p>
             </div>
         </div>

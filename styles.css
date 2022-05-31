@@ -1,10 +1,15 @@
 body{
     padding: 0;
     margin: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-header, footer,main{
+header, main{
     padding: 2rem; 
+}
+
+footer{
+    padding: 1rem 2rem; 
 }
 
 header{
@@ -43,13 +48,11 @@ form .input-model{
     display: flex;
 }
 
-form .input-model label{
+form .input-model label, span{
     padding-right: 3rem;
+    font-weight: 600;
 }
 
-form .input-model span{
-    padding-right: 3rem;
-}
 
 .input-model{
     padding: 1rem;
@@ -64,6 +67,14 @@ form .input-model span{
 .input-model input{
 }
 
+.result span{
+    padding: 8px 16px;
+    border-bottom: 2px solid rgb(148, 71, 248);
+    margin: 0;
+    background-color: rgb(208, 188, 238);
+    width: 100%;
+}
+
 .container{
     display:flex;
     flex-direction: row;
@@ -72,17 +83,25 @@ form .input-model span{
 }
 
 .form{
+    border: 2px solid rgb(148, 71, 248);
+    padding: 1rem;
 }
 
 .form p{
-    padding-bottom: 8px;
-    border-bottom: 2px solid rgb(20, 133, 224);
+    padding: 8px 16px;
+    border-bottom: 2px solid rgb(148, 71, 248);
+    margin: 0;
+    background-color: rgb(208, 188, 238);
+}
+
+.result{
+    border: 2px solid rgb(148, 71, 248);
+    padding: 1rem;
 }
 
 .result p{
     text-transform: uppercase;
     font-size: 24px;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 .model_image{
